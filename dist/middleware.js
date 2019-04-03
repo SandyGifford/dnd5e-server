@@ -20,9 +20,9 @@ var node_fetch_1 = __importDefault(require("node-fetch"));
 var createMiddleware = function (options) {
     var app = express_1.default();
     options = __assign({ path: "dnd5e" }, options);
-    app.get(path_1.default.resolve(options.path, "*"), function (req, res) {
-        var endpoint = req.path.substr(path_1.default.resolve("/", options.path).length);
-        node_fetch_1.default(path_1.default.resolve("http://www.dnd5eapi.co/api", endpoint));
+    app.get(path_1.default.join("/", options.path, "*"), function (req, res) {
+        var endpoint = req.path.substr(path_1.default.join("/", options.path).length);
+        node_fetch_1.default("http://www.dnd5eapi.co/api" + endpoint);
     });
     return app;
 };
