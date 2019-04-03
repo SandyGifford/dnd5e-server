@@ -13,10 +13,9 @@ const createMiddleware = (options?: CreateMiddlewareOptions): express.Express =>
 		...options,
 	};
 
-	app.get(path.resolve(options.path, "*"), (req, res) => {
-		const endpoint = req.path.substr(path.resolve("/", options.path).length);
-
-		nodeFetch(path.resolve("http://www.dnd5eapi.co/api", endpoint));
+	app.get(path.join("/", options.path, "*"), (req, res) => {
+		const endpoint = req.path.substr(path.join("/", options.path).length);
+		nodeFetch(`http://www.dnd5eapi.co/api${endpoint}`);
 	});
 
 	return app;
