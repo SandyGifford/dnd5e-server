@@ -15,7 +15,12 @@ const createMiddleware = (options?: CreateMiddlewareOptions): express.Express =>
 
 	app.get(path.join("/", options.path, "*"), (req, res) => {
 		const endpoint = req.path.substr(path.join("/", options.path).length);
-		nodeFetch(`http://www.dnd5eapi.co/api${endpoint}`);
+		nodeFetch(`http://www.dnd5eapi.co/api${endpoint}`)
+			.then(r => r.json())
+			.then(r => {
+				res.setHeader("Content-Type", "application/json");
+				res.end(JSON.stringify(r));
+			});
 	});
 
 	return app;
