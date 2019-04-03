@@ -1,8 +1,6 @@
 import * as DnD5e from "dnd5e";
-import nodeFetch from "node-fetch";
 
-const ServerEndpoints = new DnD5e.Endpoints(nodeFetch, "http://www.dnd5eapi.co/api");
+const ClientEndpoints = new DnD5e.Endpoints(fetch, "dnd5e");
 
-export { ServerEndpoints };
-export * from "./middleware";
+export { ClientEndpoints };
 export * from "dnd5e";
