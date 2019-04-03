@@ -17,4 +17,5 @@ var DnD5e = __importStar(require("dnd5e"));
 var node_fetch_1 = __importDefault(require("node-fetch"));
 var ServerEndpoints = new DnD5e.Endpoints(node_fetch_1.default, "http://www.dnd5eapi.co/api");
 exports.ServerEndpoints = ServerEndpoints;
+__export(require("./middleware"));
 __export(require("dnd5e"));
