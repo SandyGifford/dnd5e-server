@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"noUnusedLocals": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"esModuleInterop": true,
+		"alwaysStrict": true,
+		"declaration": true,
+		"outDir": "dist"
+	},
+	"include": [
+		"src"
+	],
+}
