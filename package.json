@@ -2,7 +2,7 @@
   "name": "dnd5e-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "watch": "tsc -w"
