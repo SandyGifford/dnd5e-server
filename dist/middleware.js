@@ -22,7 +22,12 @@ var createMiddleware = function (options) {
     options = __assign({ path: "dnd5e" }, options);
     app.get(path_1.default.join("/", options.path, "*"), function (req, res) {
         var endpoint = req.path.substr(path_1.default.join("/", options.path).length);
-        node_fetch_1.default("http://www.dnd5eapi.co/api" + endpoint);
+        node_fetch_1.default("http://www.dnd5eapi.co/api" + endpoint)
+            .then(function (r) { return r.json(); })
+            .then(function (r) {
+            res.setHeader("Content-Type", "application/json");
+            res.end(JSON.stringify(r));
+        });
     });
     return app;
 };
