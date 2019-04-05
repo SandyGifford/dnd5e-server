@@ -6,12 +6,12 @@ This repo offers typings and function endpoints to the [DnD 5e API](http://www.d
 
 ### Yarn
 ```
-yarn add dnd5e-client
+yarn add dnd5e-server
 ```
 
 ### NPM
 ```
-npm install dnd5e-client
+npm install dnd5e-server
 ```
 
 ## use
