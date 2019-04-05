@@ -115,9 +115,10 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
-dnd5e@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/dnd5e/-/dnd5e-1.0.1.tgz#9742a900822ba8a2cdb1662acbe32cc615d1a55e"
+dnd5e@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dnd5e/-/dnd5e-1.1.1.tgz#d1c55da663ca34580870fb52f86e71201aa7c527"
+  integrity sha512-rocGwCmt65A8o4gonqx6hX4VhjlJZ1cR7I9vM495aBFRZ0cyQclOOKiMOxZ3ZRQmb3bhLYoUXxS118Bjz9MVcA==
 
 ee-first@1.1.1:
   version "1.1.1"
